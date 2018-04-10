@@ -6,6 +6,10 @@
     font-size: 18px;
 }
 
+body, html {
+    height: 100%;
+}
+
 /******************************************
 navigation bar
 ******************************************/
@@ -139,4 +143,39 @@ drop down menu
 
 .dropdown .dropdown-content a:hover {
     color: #287d88;
+}
+
+
+/******************************************
+images
+******************************************/
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image:     linear-gradient(
+        rgba(40, 125, 136, 0.1), 
+        rgba(40, 125, 136, 0.1)
+      ), url("images/mountain.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 60%;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 3px black;
+
+    text-align: center;
+}
+
+.box-shadow {
+    box-shadow: 0 0 2px #737373;
 }
