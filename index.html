@@ -3,11 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Team 09 - Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="navbar" id="myTopnav">
+        <a href="#" id="active">Team 09</a>
+
+
+        <a href="#" class="navlink">About</a>
+        
+        <div class="dropdown">
+            <a href="#" class="dropbtn">
+                Project<i class="fas fa-caret-down fa-sm" style="padding-left: 3px;"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
+                <a href="files/ProgressReport.pdf">Progress Report</a>
+                <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
+                <a href="files/FinalProjectReport.pdf">Final Project Report</a>
+                <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+            </div>
+        </div> 
+
+        <a href="#" class="navlink">Data Mart</a>
+
+        <a href="#" class="navlink">Testing Page</a>
+
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fas fa-bars fa-sm"></i>
+        </a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+        </script>
 </body>
 </html>
