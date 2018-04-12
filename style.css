@@ -11,19 +11,22 @@ body, html {
     height: 100%;
 }
 
+/* page topics - main*/
 h1 {
     font-size: 32px;
     font-weight: 300;
     letter-spacing: 5px;
 }
 
+/* page topic - parts */
 h2 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 22px;
     letter-spacing: 4px;
 }
 
+/* page text */
 p {
     text-align: left;
     font-size: 18px;
@@ -45,7 +48,7 @@ p {
     text-decoration: none;
     display: block;
     text-align: center;
-    padding: 22px 20px;
+    padding: 22px 19px;
     margin: 0 2%;
 }
 
@@ -57,15 +60,16 @@ p {
     float: left;
 }
 
+.navbar .icon {
+    display: none;
+}
+
 .navbar a:hover:not(.icon) {
     color: #b4f1f1;
     text-decoration: underline;
 }
 
-.navbar .icon {
-    display: none;
-}
-
+/* current page indicator */
 #active {
     color: #b4f1f1;
     text-decoration: underline;
@@ -78,7 +82,12 @@ p {
 @media screen and (max-width: 800px) {
     .navbar a,
     .dropdown .dropbtn {
-        padding: 22px 10px;
+        padding: 22px 9px;
+    }
+
+    .column {
+        flex: 50%;
+        width: 50%;
     }
  }
 
@@ -86,6 +95,16 @@ p {
     .navbar a,
     .dropdown .dropbtn {
         padding: 22px 3px;
+
+    }
+
+    .column {
+        flex: 100%;
+        width: 100%;
+    }
+    
+    .hide {
+        display: none;
     }
 }
 
@@ -104,11 +123,6 @@ p {
 
     .navbar .dropdown {
         margin: 0;
-    }
-
-    .column {
-        flex: 100%;
-        width: 100%;
     }
 }
 
@@ -173,7 +187,7 @@ p {
 
 
 /******************************************
-/* images stuff
+/* image / icon stuff
 ******************************************/
 .hero-img {
     display: flex;
@@ -210,7 +224,7 @@ p {
 }
 
 /*****************************************************/
-/* homepage section stuff */
+/* section stuff */
 /*****************************************************/
 
 .section-zero {
@@ -244,6 +258,46 @@ p {
 }
 
 /*****************************************************/
+/* custom footer stuff */
+/*****************************************************/
+.footer {
+    background-color: #148995;
+    padding: 5%;
+}
+
+.footer-topic p,
+.footer-link p,
+.footer-link a {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.footer-info p,
+.footer-sublink a {
+    color: #b4f1f1;
+    font-size: 15px;
+    font-weight: 400;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.footer-link a:hover,
+.footer-sublink a:hover {
+    color: #1a545b;
+    text-decoration: underline;
+}
+
+.team p {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+/*****************************************************/
 /* custom button stuff */
 /*****************************************************/
 
@@ -269,6 +323,7 @@ p {
 .btn-custom:hover {
     box-shadow: 0 0 4px #404040;
     cursor: pointer;
+    color: #287d88;
 }
 
 
@@ -284,13 +339,35 @@ p {
 }
 
 .column {
-    max-width: 30%;
-    min-width: 300px;
-    padding: 0 10px;
+
+    padding: 0 30px;
     margin: 20px 0;
-    text-align: center;
 }
 
+.footer-column {
+    margin: 20px 0;
+}
+
+.pt-1 {
+    margin-top: 6px;
+}
+
+.pt-3 {
+    margin-top: 25px;
+}
+
+.pt-4 {
+    margin-top: 47px;
+}
+
+.col-30 {
+    width: 30%;
+    min-width: 325px;
+}
+
+.col-25 {
+    max-width: 275px;
+}
 .my-section {
     margin: 7% 0;
 }
