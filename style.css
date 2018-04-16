@@ -35,36 +35,40 @@ p {
 }
 
 /******************************************
-/* navigation bar stuff
+/* NAVIGATION BAR
 ******************************************/
 .navbar {
     overflow: hidden;
     background-color: #148995;
 }
 
-.navbar a {
-    color: #f2f2f2;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 22px 19px;
-    margin: 0 2%;
-}
-
-.navbar .navlink {
+/* main navigation content */
+.nav-content {
     float: right;
 }
 
-.navbar > a:first-child {
+/* all nav items */
+.nav-item {
     float: left;
 }
 
-.navbar .icon {
-    display: none;
+/* navbar text */
+.nav-brand, 
+.nav-link,
+.dropdown-btn {
+    color: #f2f2f2;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding: 12px;
+
+    display: block;
+    padding: 22px 18px;
 }
 
-.navbar a:hover:not(.icon) {
+/* hover effect for all navbar items*/
+.nav-brand:hover,
+.nav-link:hover,
+.dropdown-btn:hover {
     color: #b4f1f1;
     text-decoration: underline;
 }
@@ -76,92 +80,8 @@ p {
 }
 
 /******************************************
-/* media queries stuff
+/* DROPDOWN NAV ITEM
 ******************************************/
-/* navlink padding @ 700 */
-@media screen and (max-width: 800px) {
-    .navbar a,
-    .dropdown .dropbtn {
-        padding: 22px 9px;
-    }
-
-    .column {
-        flex: 50%;
-        width: 50%;
-    }
- }
-
-@media screen and (max-width: 700px) {
-    .navbar a,
-    .dropdown .dropbtn {
-        padding: 22px 3px;
-
-    }
-
-    .column {
-        flex: 100%;
-        width: 100%;
-    }
-    
-    .hide {
-        display: none;
-    }
-}
-
-/* hides navlinks and displays icon */
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child),
-    .dropdown .dropbtn {
-        display: none;
-    }
-
-    .navbar a.icon {
-        float: right;
-        display: block;
-    }
-
-
-    .navbar .dropdown {
-        margin: 0;
-    }
-}
-
-/* display navlinks when icon button is clicked */
-@media screen and (max-width: 600px) {
-    .navbar.responsive {
-        position: relative;
-        overflow: visible;
-    }
-
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    /* drop down menu items */
-    .navbar.responsive a,
-    .navbar.responsive .dropdown {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-/******************************************
-/* drop down menu stuff
-******************************************/
-.dropdown {
-    float: right;
-    overflow: hidden;
-    margin: 0 2%;
-} 
-
-/* when hovered display drop down */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -177,17 +97,71 @@ p {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
+    letter-spacing: 1.5px;
     display: block;
     text-align: left;
 }
 
-.dropdown .dropdown-content a:hover {
-    color: #287d88;
+.dropdown-content a:hover {
+    color: #148995;
+    text-decoration: underline;
 }
 
+.clicked {
+    display: block;
+}
+
+/* transition speed of dropdown icon rotation */
+#dropdown-icon {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
 
 /******************************************
-/* image / icon stuff
+/* HAMBURGER MENU ICON
+******************************************/
+.nav-icon {
+    display: none;
+    padding: 22px 18px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #f2f2f2;
+
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.bar2,
+.bar3 {
+    margin-top: 5px;
+}
+
+.nav-icon:hover .bar1,
+.nav-icon:hover .bar2,
+.nav-icon:hover .bar3 {
+    background-color: #b4f1f1;
+}
+
+/* transform hamburger menu to 'X' */
+.icon-x .bar1 {
+    transform: rotate(-45deg) translate(-3px, 7px);
+}
+
+.icon-x .bar2 {
+    opacity: 0;
+}
+
+.icon-x .bar3 {
+    transform: rotate(45deg) translate(-3px, -7px);
+}
+
+/******************************************
+/* IMAGES AND ICONS
 ******************************************/
 .hero-img {
     display: flex;
@@ -224,19 +198,23 @@ p {
 }
 
 /*****************************************************/
-/* section stuff */
+/* SECTIONS
 /*****************************************************/
+.section {
+    margin: 7% 0;
+}
+
+.section-title {
+    margin-bottom: 2.5%;
+}
+
+.section-part {
+    margin-bottom: 1%;
+}
 
 .section-zero {
     color: white;
-    text-align: center;
-
     text-shadow: 0px 0px 3px black;
-}
-
-.section-one {
-    color: black;
-    text-align: center;
 }
 
 .section-two {
@@ -244,7 +222,7 @@ p {
     text-align: left;
 
     background: linear-gradient(to right, #51b4bd , #1a545b);
-    padding: 8%;
+    padding: 7% 0;
 }
 
 .section-two ul li {
@@ -252,30 +230,34 @@ p {
     line-height: 30px;
 }
 
-.section-three h1 {
-    margin-bottom: 50px;
-    text-align: center;
+.section-part:not(:first-child) {
+    margin-top: 7%;
 }
 
 /*****************************************************/
-/* custom footer stuff */
+/* FOOTER
 /*****************************************************/
 .footer {
     background-color: #148995;
-    padding: 5%;
+    padding: 5% 0;
 }
 
-.footer-topic p,
-.footer-link p,
+.footer-link a,
+.footer-sublink a {
+    display: block;
+}
+
+.footer-topic,
 .footer-link a {
-    color: white;
+    color: #f2f2f2;
     font-size: 16px;
+    letter-spacing: 2px;
+
     font-weight: 400;
     text-decoration: none;
-    letter-spacing: 2px;
 }
 
-.footer-info p,
+.footer-info,
 .footer-sublink a {
     color: #b4f1f1;
     font-size: 15px;
@@ -289,19 +271,23 @@ p {
 .footer-sublink a:hover {
     color: #1a545b;
     text-decoration: underline;
+} 
+
+.footer-link a:not(:first-child) {
+    margin-top: 44px;
 }
 
-.team p {
-    font-size: 18px;
-    color: white;
-    font-weight: 400;
-    letter-spacing: 2px;
+.footer-sublink a {
+    margin-top: 6.5px;
 }
-/*****************************************************/
-/* custom button stuff */
-/*****************************************************/
 
-/* custom button */
+.mt-2 {
+    margin-top: 25px;
+}
+
+/*****************************************************/
+/* CUSTOM BUTTON
+/*****************************************************/
 .btn-custom {
     background-color: #ecfffb;
     width: 225px;
@@ -326,67 +312,221 @@ p {
     color: #287d88;
 }
 
-
 /*****************************************************/
-/* sizing stuff */
-/*****************************************************/
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 4px;
-}
-
-.column {
-
-    padding: 0 30px;
-    margin: 20px 0;
-}
-
-.footer-column {
-    margin: 20px 0;
-}
-
-.pt-1 {
-    margin-top: 6px;
-}
-
-.pt-3 {
-    margin-top: 25px;
-}
-
-.pt-4 {
-    margin-top: 47px;
-}
-
-.col-30 {
-    width: 30%;
-    min-width: 325px;
-}
-
-.col-25 {
-    max-width: 275px;
-}
-.my-section {
-    margin: 7% 0;
-}
-
-.my-topic {
-    margin-bottom: 2.5%;
-}
-
-.mb-1 {
-    margin: 1% 0;
-}
-
-.my-1 {
-    margin: 8% 0;
-}
-
-/*****************************************************/
-/* other stuff */
+/* OTHER STUFF
 /*****************************************************/
 .box-shadow {
     box-shadow: 0 0 2px #737373;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/**************************************
+/* ROWS AND COLUMNS
+**************************************/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.col-1 {
+    flex: 8.33%;
+    max-width: 8.33%;
+    padding: 0 0.5%;
+}
+
+.col-2 {
+    flex: 16.66%;
+    max-width: 16.66%;
+    padding: 0 0.5%;
+}
+
+.col-3 {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 0.5%;
+}
+
+.col-4 {
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 0 0.5%;
+}
+
+.col-5 {
+    flex: 41.66%;
+    max-width: 41.66%;
+    padding: 0 0.5%;
+}
+
+.col-6 {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 0.5%;
+}
+
+.col-7 {
+    flex: 58.33%;
+    max-width: 58.33%;
+    padding: 0 0.5%;
+}
+
+.col-8 {
+    flex: 66.66%;
+    max-width: 66.66%;
+    padding: 0 0.5%;
+}
+
+.col-9 {
+    flex: 75%;
+    max-width: 75%;
+    padding: 0 0.5%;
+}
+
+.col-10 {
+    flex: 83.33%;
+    max-width: 83.33%;
+    padding: 0 0.5%;
+}
+
+.col-11 {
+    flex: 91.66%;
+    max-width: 91.66%;
+    padding: 0 0.5%;
+}
+.col-12 {
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 0.5%;
+}
+
+/**************************************
+/* OFFSETS
+**************************************/
+.offset-1 {
+    margin-left: 8.33%;
+}
+
+.offset-2 {
+    margin-left: 16.66%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-4 {
+    margin-left: 33.33%;
+}
+
+.offset-5 {
+    margin-left: 41.66%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-7 {
+    margin-left: 58.33%;
+}
+
+.offset-8 {
+    margin-left: 66.66%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-10 {
+    margin-left: 83.33%;
+}
+
+.offset-11 {
+    margin-left: 91.66%;
+}
+
+.offset-12 {
+    margin-left: 100%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+******************************************/
+@media only screen and (min-width: 880px) {
+    .nav-item {
+        padding: 0 25px;
+        /* background-color: red; */
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .nav-item {
+        padding: 0 12px;
+        /* background-color: green; */
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .nav-item {
+        padding: 0px;
+        /* background-color: blue; */
+    }
+
+    .col-4 {
+        flex: 100%;
+        max-width: 100%;
+        margin-left: 8.33%;
+        margin-right: 8.33%;
+    }
+
+    .col-4:not(:first-child) {
+        padding-top: 25px;
+    }
+
+    .col-3 {
+        flex: 100%;
+        max-width: 100%;
+
+        margin-left: 25%;
+        margin-right: 25%;
+
+        text-align: center;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .nav-content {
+        display:none;
+    }
+
+    .nav-icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .responsive .nav-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .responsive .nav-content {
+        display: block;
+        float: none;
+    }
+
+    .responsive .nav-item {
+        float: none;
+    }
 }

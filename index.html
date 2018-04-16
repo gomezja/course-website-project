@@ -11,35 +11,49 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="navbar" id="nav">
-        <a href="#" id="active">Team 09</a>
+    <div class="navbar"  id="nav">
+        <div class="nav-item">
+            <a class="nav-brand" id="active" href="#">Team 09</a>
+        </div>
 
-
-        <a href="#" class="navlink">About</a>
-        
-        <div class="dropdown">
-            <a href="#" class="dropbtn">
-                Project<i class="fas fa-caret-down fa-sm" style="padding-left: 3px;"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
-                <a href="files/ProgressReport.pdf">Progress Report</a>
-                <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
-                <a href="files/FinalProjectReport.pdf">Final Project Report</a>
-                <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+        <div class="nav-content">
+            <div class="nav-item">
+                <a class="nav-link" href="#">About</a>
             </div>
-        </div> 
 
-        <a href="#" class="navlink">Data Mart</a>
+            <div class="nav-item">
+                <div class="nav-dropdown">
+                    <a class="dropdown-btn" href="#" onclick="dropdownClicked()">
+                        Project<i class="fas fa-caret-down fa-sm" id="dropdown-icon" ></i>
+                    </a>
+                    <div class="dropdown-content" id="dropdown">
+                        <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
+                        <a href="files/ProgressReport.pdf">Progress Report</a>
+                        <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
+                        <a href="files/FinalProjectReport.pdf">Final Project Report</a>
+                        <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+                    </div>
+                </div>
+            </div>
 
-        <a href="#" class="navlink">Testing Page</a>
+            <div class="nav-item">
+                <a class="nav-link" href="#">Data Mart</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#">Testing Page</a>
+            </div>
+        </div>
 
-        <a class="icon" href="javascript:void(0);" onclick="responsiveManager()">
-            <i class="fas fa-bars fa-sm"></i>
+        <!-- icon displays only when small screen size"-->
+        <a class="nav-icon" id="ham" href="#" onclick="hamburgerIconClicked()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </a>
     </div>
 
-    <div class="hero-img section-zero box-shadow">
+    <!-- section 0, welcome picture -->
+    <div class="hero-img section-zero text-center box-shadow">
         <div class="headline">
             <h1>Data Warehousing
                 <br>&amp;<br>
@@ -48,79 +62,102 @@
         </div>
     </div>
 
-    <div class="section-one my-section">
-        <h1 class="my-topic">Project Components</h1>
+    <!-- section 1, semester project parts -->
+    <div class="section">
+        <h1 class="section-title text-center">Project Components</h1>
+
         <div class="row">
-            <div class="column col-30">
-                <h2 class="">Data Warehousing</h2>
+            <div class="col-4 offset-1">
+                <h2>Data Warehousing</h2>
                 <div class="icon-box">
                     <i class="fas fa-database fa-3x"></i>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita, dolorum labore dignissimos laboriosam quam maiores fugit amet ipsum?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita, 
+                    dolorum labore dignissimos laboriosam quam maiores fugit amet ipsum?
+                </p>
             </div>
 
-            <div class="column col-30">
-                <h2 class="my-topic">Data Mining</h2>
+            <div class="col-4 offset-2">
+                <h2>Data Mining</h2>
                 <div class="icon-box">
                     <i class="fas fa-chart-bar fa-3x"></i>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore dolorem non ea temporibus natus dolores reiciendis amet officia deserunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore 
+                    dolorem non ea temporibus natus dolores reiciendis amet officia deserunt.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="section-two box-shadow">
-        <h1 class="mb-1">Tools / Software used</h1>
-        <ul>
-            <li>R / R Studio</li>
-            <li>Tableau</li>
-            <li>MS Excel</li>
-            <li>Naive Bayesian Classification</li>
-        </ul>
+    <!-- section 2, how and what we learned -->
+    <div class="section section-two box-shadow">
+        <div clas="row">
+            <div class="col-10 offset-1">
+                <h1 class="section-part">Tools / Software used</h1>
+                <ul>
+                    <li>R / R Studio</li>
+                    <li>Tableau</li>
+                    <li>MS Excel</li>
+                    <li>Naive Bayesian Classification</li>
+                </ul>
 
-        <div class="my-1"></div>
-
-        <h1 class="mb-1">Knowledge Gained</h1>
-        <ul>
-            <li>Hands-on experience with the process of Knowledge discovery</li>
-            <li>Experience with data analysis and visualization tools</li>
-            <li>Preprocessing is the most important step</li>
-            <li>Deeper understanding of classification</li>
-        </ul>
+                <h1 class="section-part">Knowledge Gained</h1>
+                <ul>
+                    <li>Hands-on experience with the process of Knowledge discovery</li>
+                    <li>Experience with data analysis and visualization tools</li>
+                    <li>Preprocessing is the most important step</li>
+                    <li>Deeper understanding of classification</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="section-three my-section">
-        <h1>Meet the Team Behind the Project</h1>
+    <!-- section 3, meet the team -->
+    <div class="section">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <h1 class="section-title text-center">Meet the Team Behind the Project</h1>
 
-        <div class="btn-custom">
-            <a href="#"><input type="button" class="btn-custom" value="About Us"></a>
+                <div class="btn-custom">
+                    <a href="#"><input type="button" class="btn-custom" value="About Us"></a>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- footer -->
     <div class="footer">
         <div class="row">
-            <div class="footer-column col-25">
-                <div class="team"><p>Team 09</p></div>
+            <div class="col-3 offset-1">
+                <div class="footer-link">
+                    <a href="index.html">Team 09</a>
+                </div>
 
-                <div class="footer-topic pt-3"><p>Members:</p></div>
-                <div class="footer-info pt-1"><p>Jesus Gomez, Jammy Loeur</p></div>
+                <div class="footer-topic mt-2">Members:</div>
+                <div class="footer-info">Jesus Gomez, Jammy Loeur</div>
 
-                <div class="footer-topic pt-3"><p>Created:</p></div>
-                <div class="footer-info pt-1"><p>SPRING 2017</p></div>
+                <div class="footer-topic mt-2">Created:</div>
+                <div class="footer-info">SPRING 2017</div>
             </div>
-            <div class="footer-column hide col-25">
-                <div class="footer-link"><a href="#">About</a></div>
-                <div class="footer-link pt-4"><a href="#">Data Mart</a></div>
-                <div class="footer-link pt-4"><a href="#">Testing Page</a></div>
+
+            <div class="col-3 offset-2 hide">
+                <div class="footer-link">
+                    <a href="#">About</a>
+                    <a href="#">Data Mart</a>
+                    <a href="#">Testing Page</a>
+                </div>
             </div>
-            <div class="footer-column hide col-25">
-                <div class="footer-link"><p>Project</p></div>
-                <div class="footer-sublink pt-1"><a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a></div>
-                <div class="footer-sublink pt-1"><a href="files/ProgressReport.pdf">Progress Report</a></div>
-                <div class="footer-sublink pt-1"><a href="files/ProjectPresentation.pdf">Project Oral Presentation</a></div>
-                <div class="footer-sublink pt-1"><a href="files/FinalProjectReport.pdf">Final Project Report</a></div>
-                <div class="footer-sublink pt-1"><a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a></div>
+
+            <div class="col-3 hide">
+                <div class="footer-topic">Project</div>
+
+                <div class="footer-sublink">
+                    <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
+                    <a href="files/ProgressReport.pdf">Progress Report</a>
+                    <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
+                    <a href="files/FinalProjectReport.pdf">Final Project Report</a>
+                    <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+                </div>
             </div>
         </div>
     </div>
