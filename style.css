@@ -343,8 +343,11 @@ p {
 /* OTHER STUFF
 /*****************************************************/
 .box-shadow {
-    box-shadow: 0px 15px 15px rgba(50,50,93,0.1), 
-                0px 5px 10px rgba(0,0,0,0.07);
+    /* box-shadow: 0px 15px 15px rgba(50,50,93,0.1), 
+                0px 5px 10px rgba(0,0,0,0.07); */
+
+    box-shadow: 0px 3px 7px rgba(50,50,93,0.2),
+    0px 1px 2px rgba(0,0,0,0.3);
 }
 
 .text-center {
@@ -431,6 +434,12 @@ p {
     padding: 0 0.5%;
 }
 
+.col-cstm {
+    flex: 37.51%;
+    max-width: 37.51%;
+    padding: 0 0.5%;
+}
+
 /**************************************
 /* OFFSETS
 **************************************/
@@ -504,6 +513,16 @@ p {
         padding: 0px;
         /* background-color: blue; */
     }
+    
+    .col-3 {
+        flex: 100%;
+        max-width: 100%;
+
+        margin-left: 25%;
+        margin-right: 25%;
+
+        text-align: center;
+    }
 
     .col-4 {
         flex: 100%;
@@ -513,17 +532,18 @@ p {
     }
 
     .col-4:not(:first-child) {
-        padding-top: 25px;
+        margin-top: 25px;
     }
 
-    .col-3 {
+    .col-cstm {
         flex: 100%;
         max-width: 100%;
+        margin-left: 8.33%;
+        margin-right: 8.33%;
+    }
 
-        margin-left: 25%;
-        margin-right: 25%;
-
-        text-align: center;
+    .col-cstm:not(:first-child) {
+        margin-top: 25px;
     }
 
     .hide {
@@ -557,4 +577,48 @@ p {
     .responsive .nav-item {
         float: none;
     }
+}
+
+/******************************************
+/* ABOUT US PAGE
+******************************************/
+.member-cell {
+    background-color: #ecfffb;
+
+    border-radius: 7px;
+}
+
+.member-info {
+    padding: 3% 7%;
+}
+
+/* .member-info p:not(:first-child) {
+    margin-top: 15px;
+} */
+
+.member-pic {
+    display: block;
+    width: 200px;
+    height: 200px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+
+    margin: 0 auto;
+}
+
+.jg {
+    background-image: url("images/gomezja.png");
+}
+
+.jl {
+    background-image: url("https://lh3.googleusercontent.com/lYpxgDcOk5EGBOly1PJDYH8hhROjLHUpJuS6nuW1WadbYRbhEbMNBxyt3Xw3CmsfcQyAB3csgkRx5TGrBe518DPoiK32Qo-uACZzOKhcCzw-J_dnXAP5Bfn9uLXY7BgW48MRAd7xXFdsLFbSfmX_6BlN3sNutP4ThXCtJMDcTP9mFtqucPmk5JULniy9gTgdUrqax5NUtg58tsoVDOo_sDwqup8xuwHPy_T8LERgWegv-xfP3FEwVIjTiF6Uw501gZmFtQBKInxjhOWDCVKvNS41ERQMMdlHmkyxGRiP8989MOOThUm4yzTh73S_LkG38CL0IIjOem_LMv4Edl7sWig7ukPwzudS59MzgYZKzsdsbsxQoCbpE8IkW_r2jnxmbSyY10sbAKg00XmavTsOEVpTxkC8i0d-ANZpQXm1bQYik7ZL6Ntxaiw2SVgUKummeauJOcSkCFoY1ZkV6KTNjkXLexdYrwvnCQUOlh58n0jheHvD_K0LzKHQw0dSTZni2zLSvjLkQlXZDlN3zeQcIZBWWdlOVaQ7WK8_-r-Ep2Nyjxjvd_tsjNEo5jRfvIWIdWqZlnUlWeHSDSMLhH9eiwlj-65gr-B_S6pQQiLbY8j8MSNE0zrEP49aXqJ-R9r3xo7znV2zIHk_KGGfIlB00J5MoJSOabN5DPfzPYdMUQ=w710-h947-no");
 }
