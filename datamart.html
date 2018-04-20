@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Team 09 - Data Mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar box-shadow"  id="nav">
+        <div class="nav-item">
+            <a class="nav-brand" id="active" href="index.html">Team 09</a>
+        </div>
+
+        <div class="nav-content">
+            <div class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </div>
+
+            <div class="nav-item">
+                <div class="nav-dropdown">
+                    <a class="dropdown-btn" href="#" onclick="dropdownClicked()">
+                        Project<i class="fas fa-caret-down fa-sm" id="dropdown-icon" ></i>
+                    </a>
+                    <div class="dropdown-content" id="dropdown">
+                        <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
+                        <a href="files/ProgressReport.pdf">Progress Report</a>
+                        <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
+                        <a href="files/FinalProjectReport.pdf">Final Project Report</a>
+                        <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-link" href="datamart.html">Data Mart</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#">Testing Page</a>
+            </div>
+        </div>
+
+        <!-- icon displays only when small screen size"-->
+        <a class="nav-icon" id="ham" href="#" onclick="hamburgerIconClicked()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </a>
+    </div>
+
+    <div class="section">
+        <h1 class="section-title text-center">Data Mart</h1>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <form action="#" method="get">
+                    <h2>Customer Info</h2>
+
+                    <section class="customer-info">
+                        <div>
+                            <label for="choice-one">Highest Education Level:</label>
+                            <select id="choice-one" name="education">
+                                <option value="all">All</option>
+                                <option value="High School">High School</option>
+                                <option value="University">University</option>        
+                                <option value="Graduate School">Graduate School</option>    
+                                <option value="Others">Other</option>     
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-two">Sex:</label>
+                            <select id="choice-two" name="gender">
+                                <option value="all">All</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>   
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-three">Marital Status:</label>
+                            <select id="choice-three" name="marriage">
+                                <option value="all">All</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>   
+                                <option value="Others">Other</option> 	  
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-four">Age:</label>
+                            <select id="choice-four" name="age">
+                                <option value="all">All</option>
+                                <option value="19 < Age AND Age < 30">20 - 29 yrs</option>
+                                <option value="29 < Age AND Age < 40">30 - 39 yrs</option>
+                                <option value="39 < Age AND Age < 50">40 - 49 yrs</option>
+                                <option value="49 < Age AND Age < 60">50 - 59 yrs</option> 
+                                <option value="59 < Age AND Age < 70">60 - 69 yrs</option> 
+                                <option value="69 < Age AND Age < 80">70 - 79 yrs</option>    
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-five">Payment Default (7th Month):</label>
+                            <select id="choice-five" name="default">
+                                <option value="all">All</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No" >No </option>   
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <input type="Submit" value="Submit">
+                        </div>
+                    </section>
+                </form>
+            
+                <p style="margin-top: 15px;"><strong>Instructions:</strong> Select the customer's information from the dropdown menus and press the "Submit" button when finished.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1 class="section-title text-center">Our Data Set</h1>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <p>Our database contains 30,000 customer records from the country of Taiwan. Data attributes that are included in this database contains customer information such as age, gender, and edducation, their payment history over a six-month period, amount owed, and their defautl status for the seventh month.</p>
+                <p style="margin-top: 15px;">If you would like to take a look at the data set used for this project, it can be found <a href="https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients">here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="row">
+            <div class="col-3 offset-1">
+                <div class="footer-link">
+                    <a href="index.html">Team 09</a>
+                </div>
+
+                <div class="footer-topic mt-2">Members:</div>
+                <div class="footer-info">Jesus Gomez, Jammy Loeur</div>
+
+                <div class="footer-topic mt-2">Created:</div>
+                <div class="footer-info">SPRING 2017</div>
+            </div>
+
+            <div class="col-3 offset-2 hide">
+                <div class="footer-link">
+                    <a href="about.html">About</a>
+                    <a href="datamart.html">Data Mart</a>
+                    <a href="#">Testing Page</a>
+                </div>
+            </div>
+
+            <div class="col-3 hide">
+                <div class="footer-topic">Project</div>
+
+                <div class="footer-sublink">
+                    <a href="files/ResearchAndProposal.pdf">Research Paper &amp; Proposal</a>
+                    <a href="files/ProgressReport.pdf">Progress Report</a>
+                    <a href="files/ProjectPresentation.pdf">Project Oral Presentation</a>
+                    <a href="files/FinalProjectReport.pdf">Final Project Report</a>
+                    <a href="http://athena.ecs.csus.edu/~mei/177/assignment.html">Project Instructions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="myScripts.js"></script>
+</body>
+</html>
