@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Team 09 - Data Mart</title>
+    <title>Team 09 - Testing Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -54,17 +54,33 @@
 
     <!-- form -->
     <div class="section">
-        <h1 class="section-title text-center">Data Mart</h1>
+        <h1 class="section-title text-center">Testing Page</h1>
         <div class="row">
             <div class="col-10 offset-1">
                 <form action="#" method="get">
-                    <h2>Customer Info</h2>
+                    <h2>Data Mining Demo</h2>
 
                     <section class="customer-info">
                         <div>
-                            <label for="choice-one">Highest Education Level:</label>
-                            <select id="choice-one" name="education">
-                                <option value="all">All</option>
+                            <label for="choice-one">Credit Limit:</label>
+                            <select id="choice-one" name="limit">
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-three">Sex:</label>
+                            <select id="choice-three" name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>   
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-two">Highest Education Level:</label>
+                            <select id="choice-two" name="education">
                                 <option value="High School">High School</option>
                                 <option value="University">University</option>        
                                 <option value="Graduate School">Graduate School</option>    
@@ -73,18 +89,8 @@
                         </div>
 
                         <div>
-                            <label for="choice-two">Sex:</label>
-                            <select id="choice-two" name="gender">
-                                <option value="all">All</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>   
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="choice-three">Marital Status:</label>
-                            <select id="choice-three" name="marriage">
-                                <option value="all">All</option>
+                            <label for="choice-four">Marital Status:</label>
+                            <select id="choice-four" name="marriage">
                                 <option value="Single">Single</option>
                                 <option value="Married">Married</option>   
                                 <option value="Others">Other</option> 	  
@@ -92,24 +98,37 @@
                         </div>
 
                         <div>
-                            <label for="choice-four">Age:</label>
-                            <select id="choice-four" name="age">
-                                <option value="all">All</option>
-                                <option value="19 < Age AND Age < 30">20 - 29 yrs</option>
-                                <option value="29 < Age AND Age < 40">30 - 39 yrs</option>
-                                <option value="39 < Age AND Age < 50">40 - 49 yrs</option>
-                                <option value="49 < Age AND Age < 60">50 - 59 yrs</option> 
-                                <option value="59 < Age AND Age < 70">60 - 69 yrs</option> 
-                                <option value="69 < Age AND Age < 80">70 - 79 yrs</option>    
+                            <label for="choice-five">Age:</label>
+                            <select id="choice-five" name="age">
+                                <option value="20-29">20-29</option>
+                                <option value="30-39">30-39</option>
+                                <option value="40-40">40-49</option>
+                                <option value="50-59">50-59</option>
+                                <option value="60-69">60-69</option>
+                                <option value="70-80">70-80</option>    
                             </select>
                         </div>
 
                         <div>
-                            <label for="choice-five">Payment Default (7th Month):</label>
-                            <select id="choice-five" name="default">
-                                <option value="all">All</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No" >No </option>   
+                            <label for="choice-six" >Amount Owed:</label>
+                            <select id="choice-six" name = "owed">
+                                <option value="None">None</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="choice-seven">Number of Missed Payments:</label>
+                            <select id="choice-seven" name="missed">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>  
                             </select>
                         </div>
 
@@ -119,17 +138,6 @@
                     </section>
                 </form>
             
-                <p style="margin-top: 15px;"><strong>Instructions:</strong> Select the customer's information from the dropdown menus and press the "Submit" button when finished.
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h1 class="section-title text-center">Our Data Set</h1>
-        <div class="row">
-            <div class="col-10 offset-1">
-                <p>Our database contains 30,000 customer records from the country of Taiwan. Data attributes that are included in this database contains customer information such as age, gender, and edducation, their payment history over a six-month period, amount owed, and their defautl status for the seventh month.</p>
-                <p style="margin-top: 15px;">If you would like to take a look at the data set used for this project, it can be found <a href="https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients">here</a></p>
             </div>
         </div>
     </div>
