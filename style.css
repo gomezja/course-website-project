@@ -198,7 +198,7 @@ p {
     justify-content: center;
     align-items: center;
 
-    background-color: #ecfffb;
+    background-color: #ccdbe5;
     color: #148995;
 
     width: 100px;
@@ -348,9 +348,6 @@ p {
 /* OTHER STUFF
 /*****************************************************/
 .box-shadow {
-    /* box-shadow: 0px 15px 15px rgba(50,50,93,0.1), 
-                0px 5px 10px rgba(0,0,0,0.07); */
-
     box-shadow: 0px 3px 7px rgba(50,50,93,0.2),
     0px 1px 2px rgba(0,0,0,0.3);
 }
@@ -363,8 +360,8 @@ p {
 /* ABOUT US PAGE
 ******************************************/
 .member-cell {
-    background-color: #ecfffb;
-
+    background-color: #ccdbe5;
+    color: #383838;
     border-radius: 7px;
 }
 
